@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function Navbar() {
   return (
-    <nav className="bg-black text-white p-4">
+    <nav className="bg-black text-white shadow-md fixed top-0 left-0 w-full z-50">
       <ul className="flex gap-20 justify-center">
         <li>
           <Link 
-            to="/" 
+            to="home"
+            smooth={true}
+            duration={500} 
             className="hover:text-gray-400 transition-colors duration-200"
           >
             Home
@@ -14,7 +16,9 @@ function Navbar() {
         </li>
         <li>
           <Link 
-            to="/about" 
+            to="about" 
+            smooth={true}
+            duration={500}
             className="hover:text-gray-400 transition-colors duration-200"
           >
             About
@@ -22,7 +26,9 @@ function Navbar() {
         </li>
         <li>
           <Link 
-            to="/projects" 
+            to="projects" 
+            smooth={true}
+            duration={500}
             className="hover:text-gray-400 transition-colors duration-200"
           >
             Projects
@@ -30,7 +36,9 @@ function Navbar() {
         </li>
         <li>
           <Link 
-            to="/contact" 
+            to="contact" 
+            smooth={true}
+            duration={500}
             className="hover:text-gray-400 transition-colors duration-200"
           >
             Contact
